@@ -1,0 +1,11 @@
+//variables
+$color-principal: red;
+$color-letra: green;
+
+body{
+    background-color: #ccc;
+}
+
+p{
+    color: $color-letra;
+}
