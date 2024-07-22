@@ -6,6 +6,11 @@ import {Contacto} from '../components/Contacto';
 import {Error} from '../components/Error';
 import Persona from '../components/Persona';
 import PanelControl from '../components/PanelControl';
+import InicioPanel from '../components/Panel/Inicio';
+import Crear from '../components/Panel/Crear';
+import Gestion from '../components/Panel/Gestion';
+import Acerca from '../components/Panel/Acerca';
+
 
 const RouterPrincipal = () => {
   return (
@@ -35,6 +40,11 @@ const RouterPrincipal = () => {
               className={({isActive}) => isActive ? "activado" : ""}
             >Contacto</NavLink>
           </li>
+          <li>
+            <NavLink to="/panel"
+              className={({isActive}) => isActive ? "activado" : ""}
+            >Panel de Control</NavLink>
+          </li>
             
           
         </ul>
@@ -51,7 +61,14 @@ const RouterPrincipal = () => {
             <Route path="/persona/:nombre" element={<Persona/>}/>
             <Route path="/persona" element={<Persona/>}/>
             <Route path="/redirigir" element={<Navigate to="/persona/alvaro/climent"/>}/>
-            <Route path="/panel" element={<PanelControl/>}/>
+            <Route path="/panel/*" element={<PanelControl/>}>
+                  <Route index element={<InicioPanel/>}/>
+                  <Route path="inicio" element={<InicioPanel/>}/>
+                  <Route path="crear-articulos" element={<Crear/>}/>
+                  <Route path="gestion-usuarios" element={<Gestion/>}/>
+                  <Route path="acerca-de" element={<Acerca/>}/>
+
+            </Route>
             
             <Route path="*" element={<Error/>}/>     
         </Routes>

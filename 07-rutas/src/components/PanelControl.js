@@ -1,4 +1,5 @@
 import React from 'react'
+import { Outlet, NavLink } from 'react-router-dom'
 
 const PanelControl = () => {
   return (
@@ -8,19 +9,23 @@ const PanelControl = () => {
       <nav>
         <ul>
             <li>
-                <a href="/panel/inicio">Inicio</a>
+                <NavLink to="/panel/inicio">Inicio</NavLink>
             </li>
             <li>
-                <a href="/panel/crear-articulos">Crear Articulos</a>
+                <NavLink to="/panel/crear-articulos">Crear Articulos</NavLink>
             </li>
             <li>
-                <a href="/panel/gestion-usuarios">Gestion Usuarios</a>
+                <NavLink to="/panel/gestion-usuarios">Gestion Usuarios</NavLink>
             </li>
             <li>
-                <a href="/panel/acerca-de">Acerca de</a>
+                <NavLink to="/panel/acerca-de">Acerca de</NavLink>
             </li>
         </ul>
       </nav>
+      <div>
+        {/*Quiero cargar aqui los componentes de las subrutas o rutas anidadas */}
+        <Outlet/>
+      </div>
     </div>
   )
 }

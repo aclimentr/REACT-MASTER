@@ -1,0 +1,56 @@
+.cv-page{
+    width:100%;
+    margin: 100px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.cv-section{
+    width: 60%;
+    display: flex;
+    flex-flow: column wrap;
+    background: linear-gradient(black 20%, yellow 80%);
+    padding: 50px;
+    border: 3px solid yellow;
+}
+
+.cv-header{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    transition: all 300ms;
+}
+.cv-header img{
+    width: 195px;
+    margin-right: 50px;
+}
+.cv-header div{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    font-size: 20px;
+    color: yellow;
+    strong{
+        width: 10%;
+        display: flex;
+        flex-flow: column wrap;
+    a{
+        text-decoration: none;
+        color: rgb(129, 137, 255);
+    }
+    a:hover{
+        text-decoration: none;
+        color: yellow;
+        font-size: 25px;
+    }
+}
+}
+
+.cv-body{
+    width: 100%;
+    margin-top: 50px;
+    h3{
+        color:yellow;
+        font-size: 25px;
+    }
+}
